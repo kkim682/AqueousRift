@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1028.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuBarController">
+   <top>
+       <MenuBar BorderPane.alignment="CENTER">
+           <Menu fx:id="hello" mnemonicParsing="false">
+           </Menu>
+           <Menu fx:id="home" mnemonicParsing="false" />
+           <Menu fx:id="login" mnemonicParsing="false">
+           </Menu>
+           <Menu fx:id="userOptions" mnemonicParsing="false">
+               <MenuItem mnemonicParsing="false" onAction="#handleEditMenu" text="Edit profile" />
+               <MenuItem mnemonicParsing="false" onAction="#handleLogoutMenu" text="Logout" />
+           </Menu>
+           <Menu fx:id="reports" mnemonicParsing="false">
+               <MenuItem mnemonicParsing="false" onAction="#handleViewAllMenu" text="View All Reports" />
+               <MenuItem fx:id="viewMyReports" mnemonicParsing="false" onAction="#handleViewMyReportsMenu" text="View My Reports" />
+               <MenuItem fx:id="historicalGraph" mnemonicParsing="false" onAction="#handleViewGraph" text="View Historical Graph" />
+           </Menu>
+           <Menu mnemonicParsing="false" text="View By">
+               <Menu mnemonicParsing="false" text="Water Type">
+                   <MenuItem fx:id="bottled" mnemonicParsing="false" onAction="#handleWaterType" text="Bottled" />
+                   <MenuItem fx:id="well" mnemonicParsing="false" onAction="#handleWaterType" text="Well" />
+                   <MenuItem fx:id="stream" mnemonicParsing="false" onAction="#handleWaterType" text="Stream" />
+                   <MenuItem fx:id="lake" mnemonicParsing="false" onAction="#handleWaterType" text="Lake" />
+                   <MenuItem fx:id="spring" mnemonicParsing="false" onAction="#handleWaterType" text="Spring" />
+                   <MenuItem fx:id="other" mnemonicParsing="false" onAction="#handleWaterType" text="Other" />
+               </Menu>
+               <Menu mnemonicParsing="false" text="Water Condition">
+                   <MenuItem fx:id="waste" mnemonicParsing="false" onAction="#handleWaterCondition" text="Waste" />
+                   <MenuItem fx:id="treatableClear" mnemonicParsing="false" onAction="#handleWaterCondition" text="Treatable_Clear" />
+                   <MenuItem fx:id="treatableMuddy" mnemonicParsing="false" onAction="#handleWaterCondition" text="Treatable_Muddy" />
+                   <MenuItem fx:id="potable" mnemonicParsing="false" onAction="#handleWaterCondition" text="Potable" />
+               </Menu>
+            <Menu mnemonicParsing="false" text="Overall Condition">
+              <items>
+                <MenuItem fx:id="safe" mnemonicParsing="false" onAction="#handleOverallCondition" text="Safe" />
+                  <MenuItem fx:id="treatable" mnemonicParsing="false" onAction="#handleOverallCondition" text="Treatable" />
+                  <MenuItem fx:id="unsafe" mnemonicParsing="false" onAction="#handleOverallCondition" text="Unsafe" />
+              </items>
+            </Menu>
+               <MenuItem mnemonicParsing="false" onAction="#handleViewAllPins" text="All Pins" />
+           </Menu>
+           <Menu mnemonicParsing="false" text="Help">
+               <MenuItem mnemonicParsing="false" onAction="#handleAboutMenu" text="About" />
+               <MenuItem mnemonicParsing="false" onAction="#handleContactMenu" text="Contact" />
+           </Menu>
+       </MenuBar>
+   </top>
+</BorderPane>

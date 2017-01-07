@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane id="pane" prefHeight="736.0" prefWidth="400.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
+    <GridPane hgap="10.0" prefHeight="736.0" prefWidth="400.0" vgap="10.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="184.0" minWidth="-Infinity" prefWidth="137.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="207.0" minWidth="-Infinity" prefWidth="203.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+        </padding>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Click a pin on the map to see a report." wrappingWidth="350.43115234375">
+            <font>
+                <Font name="Segoe UI Bold Italic" size="15.0" />
+            </font>
+        </Text>
+        <Text id="data" fx:id="date" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Text id="data" fx:id="type" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Label id="label" text="Reported on " GridPane.rowIndex="3">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label id="label" fx:id="typeLabel" text="Type" GridPane.rowIndex="4">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label id="label" fx:id="conditionLabel" text="Condition" GridPane.rowIndex="5">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Label id="label" fx:id="overallConditionLabel" text="Overall Condition" visible="false" GridPane.rowIndex="4">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <Text id="data" fx:id="condition" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <Text id="data" fx:id="overallCondition" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Label text="Latitude" GridPane.rowIndex="1" />
+        <Label text="Longitude" GridPane.rowIndex="2" />
+        <Text id="data" fx:id="longitude" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Text id="data" fx:id="latitude" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label fx:id="virusLabel" text="Virus" visible="false" GridPane.rowIndex="5" />
+        <Label fx:id="contaminationLabel" text="Contaminant" visible="false" GridPane.rowIndex="6" />
+        <Text id="data" fx:id="virus" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <Text id="data" fx:id="contamination" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <Button id="button-delete" fx:id="delete" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="65.0" prefWidth="166.0" text="Delete" GridPane.columnSpan="2" GridPane.rowIndex="8" />
+        <Button id="button-primary" fx:id="report" contentDisplay="RIGHT" graphicTextGap="20.0" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="82.0" prefWidth="350.0" text="Submit a Report" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+        <Button id="button-secondary" fx:id="update" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="67.0" prefWidth="170.0" text="Update" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+    </GridPane>
+</StackPane>

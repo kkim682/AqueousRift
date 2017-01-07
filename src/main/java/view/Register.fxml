@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="736.0" prefWidth="1028.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterController">
+    <GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="742.0" prefWidth="1028.0" vgap="10.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="625.0" minWidth="10.0" prefWidth="167.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="1028.0" minWidth="5.0" prefWidth="91.0" />
+         <ColumnConstraints hgrow="ALWAYS" maxWidth="1028.0" minWidth="10.0" prefWidth="200.0" />
+         <ColumnConstraints hgrow="ALWAYS" maxWidth="1028.0" minWidth="10.0" prefWidth="25.0" />
+         <ColumnConstraints hgrow="ALWAYS" maxWidth="1028.0" minWidth="10.0" prefWidth="170.0" />
+         <ColumnConstraints hgrow="ALWAYS" maxWidth="307.0" minWidth="10.0" prefWidth="251.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <padding>
+            <Insets bottom="25.0" left="40.0" right="40.0" top="25.0" />
+        </padding>
+        <Label text="Username" translateY="20.0" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <Label text="First Name" translateY="20.0" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+        <Label text="Last Name" translateY="20.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+        <Label text="Password" translateY="20.0" GridPane.columnSpan="2" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+        <Label text="Phone" translateY="20.0" GridPane.columnSpan="2" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+        <Label text="Email" translateY="20.0" GridPane.columnSpan="2" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+        <Label text="Role" translateY="20.0" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <Text id="heading" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTER" textAlignment="CENTER" wrappingWidth="978.978515625" GridPane.columnSpan="3" GridPane.rowSpan="2">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Text>
+        <TextField fx:id="username" translateY="20.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <ComboBox fx:id="userType" prefHeight="31.0" prefWidth="160.0" promptText="User" translateY="20.0" GridPane.columnIndex="5" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <ComboBox fx:id="prefix" prefHeight="31.0" prefWidth="91.0" translateY="20.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="10.0" right="2.0" top="5.0" />
+         </GridPane.margin></ComboBox>
+        <TextField fx:id="firstName" maxWidth="-Infinity" prefHeight="32.0" prefWidth="233.0" translateY="20.0" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+        <TextField fx:id="lastName" translateY="20.0" GridPane.columnIndex="5" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+        <PasswordField fx:id="password" translateY="20.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+        <PasswordField fx:id="confirmPassword" prefHeight="31.0" prefWidth="150.0" translateY="20.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+        <TextField fx:id="pNumber" prefHeight="31.0" prefWidth="190.0" promptText="ex) 000-000-0000" translateY="20.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+        <TextField fx:id="email" prefHeight="31.0" prefWidth="127.0" promptText="ex) johndoe@mail.com" translateY="20.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+      <ComboBox fx:id="securityQuestion" prefHeight="31.0" prefWidth="364.0" translateY="20.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="7" />
+      <TextField fx:id="securityAnswer" maxWidth="278.0" prefHeight="31.0" prefWidth="278.0" translateY="20.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+        <Button id="button-primary" fx:id="ok" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="48.0" prefWidth="250.0" text="OK" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="9" GridPane.rowSpan="2" />
+        <Button id="button-secondary" fx:id="cancel" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="48.0" prefWidth="250.0" text="Cancel" GridPane.columnSpan="2" GridPane.rowIndex="9" GridPane.rowSpan="2" />
+        <Label text="Confirm Password" translateY="20.0" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="4" />
+      <Label text="Security Question" translateY="20.0" GridPane.rowIndex="7" />
+      <Label text="Answer" translateY="20.0" GridPane.columnIndex="4" GridPane.halignment="LEFT" GridPane.rowIndex="7" />
+    </GridPane>
+</StackPane>

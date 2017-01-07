@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
+
+<StackPane id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="736.0" prefWidth="400.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditProfileController">
+    <GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="767.0" prefWidth="400.0" vgap="10.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="148.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="152.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="97.0" minWidth="10.0" prefWidth="28.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+        <padding>
+            <Insets bottom="50.0" left="25.0" right="25.0" top="25.0" />
+        </padding>
+        <opaqueInsets>
+            <Insets />
+        </opaqueInsets>
+        <Text id="heading" strokeType="OUTSIDE" strokeWidth="0.0" text="EDIT PROFILE" wrappingWidth="351.6708984375" GridPane.rowSpan="2" />
+        <Label text="Username" GridPane.rowIndex="2" />
+        <Label text="New Password" GridPane.rowIndex="3" />
+        <Label text="Confirm Password" GridPane.rowIndex="4" />
+        <Label text="Prefix " GridPane.rowIndex="5" />
+        <Label text="First Name" GridPane.rowIndex="6" />
+        <Label text="Last Name" GridPane.rowIndex="7" />
+        <Label text="Email" GridPane.rowIndex="8" />
+        <Label text="Phone" GridPane.rowIndex="9" />
+        <Text fx:id="username" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="212.6708984375" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <PasswordField fx:id="newPassword" prefHeight="31.0" prefWidth="149.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <PasswordField fx:id="confirmPassword" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <ComboBox fx:id="prefix" prefHeight="18.0" prefWidth="111.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <TextField fx:id="firstName" prefHeight="31.0" prefWidth="154.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <TextField fx:id="lastName" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <TextField fx:id="email" prefHeight="31.0" prefWidth="266.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        <TextField fx:id="pNumber" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+        <Button id="button-primary" fx:id="ok" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="48.0" prefWidth="414.0" text="OK" GridPane.columnSpan="3" GridPane.rowIndex="11" />
+        <Button id="button-secondary" fx:id="cancel" mnemonicParsing="false" onAction="#handleButtonClicked" prefHeight="48.0" prefWidth="391.0" text="Cancel" GridPane.columnSpan="3" GridPane.rowIndex="12" />
+    </GridPane>
+</StackPane>

@@ -1,0 +1,53 @@
+apply plugin: 'java'
+apply plugin: 'checkstyle'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+version = '1.0'
+defaultTasks 'clean', 'jar', 'check', 'run'
+mainClassName = 'main.MainFXApplication'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile 'com.google.firebase:firebase-server-sdk:3.0.1'
+    compile 'com.sparkjava:spark-core:2.2'
+    compile 'com.twilio.sdk:twilio:7.3.0'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.7'
+}
+
+jar {
+    description = 'Creates the executable jar file for the project'
+    manifest {
+        attributes( 'Implementation-Title': 'Aqueous Rift',
+                    'Implementation-version': version,
+                    'Main-Class': 'main.MainFXApplication',
+                    'Class-Path': configurations.compile.files.join(" ")
+                  )
+    }
+    println 'Creates jar'
+}
+
+compileJava << {
+    println 'CompileJava'
+}
+
+javadoc << {
+    println 'Javadoc'
+}
+
+clean << {
+    println 'Clean'
+}
+
+sourceSets {
+    main {
+        resources.srcDirs = ["src/main/java"]
+    }
+}
+
+checkstyle {
+    toolVersion = '6.18'
+}
