@@ -1,7 +1,7 @@
 [![Stories in Ready](https://badge.waffle.io/joshuagaul/aqueous-rift.png?label=ready&title=Ready)](https://waffle.io/joshuagaul/aqueous-rift)
 # Aqueous Rift
 
-<a href="https://www.youtube.com/watch?v=tVMG9emm2Rw target="blank"><img src="http://img.youtube.com/vi/tVMG9emm2Rw/0.jpg"
+<a href="https://www.youtube.com/watch?v=tVMG9emm2Rw" target="blank"><img src="http://img.youtube.com/vi/tVMG9emm2Rw/0.jpg"
 alt="Aqueous Rift" width="240" height="180" border="0" /></a>
 <br>[Watch introduction →] (https://www.youtube.com/watch?v=tVMG9emm2Rw)
 <br>
